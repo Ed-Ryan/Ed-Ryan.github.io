@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+header {
+    background-color: lightgray;
+    padding: 10px;
+    text-align: center;
+}
+
+nav {
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-tabs {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-tabs li {
+    flex: 1;
+    text-align: center;
+}
+
+.nav-tabs a {
+    color: white;
+    display: block;
+    padding: 10px 0;
+    text-decoration: none;
+}
+
+main {
+    display: flex;
+}
+
+section {
+    flex: 1;
+    padding: 20px;
+}
+
+#register form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#register label,
+#scores th {
+    font-weight: bold;
+    padding: 10px;
+    text-align: left;
+}
+
+#register input[type="text"],
+#register input[type="email"] {
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 200px;
+}
+
+#scores table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#scores td,
+#scores th {
+    border: 1px solid gray;
+    padding: 10px;
+    text-align: left;
+}
+
+footer {
+    background-color: lightgray;
+    padding: 10px;
+    text-align: center;
+}
