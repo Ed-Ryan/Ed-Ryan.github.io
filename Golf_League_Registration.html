@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Golf League Organization - Registration</title>
+    <link rel="stylesheet" href="Basic.css">
+    <script src"Registration_JS.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Golf League Organization</h1>
+    </header>
+    <nav>
+      <ul class="nav-tabs">
+        <li><a href="Basic_Golf_League.html">Home</a></li>
+        <li><a href="#scores">Scores</a></li>
+        <li><a href="#events">Events</a></li>
+      </ul>
+    </nav>
+    <main>
+      <section id="register-form">
+        <h2>Registration Form</h2>
+        <form id="form">
+          <label for="first-name">First Name:</label>
+          <input type="text" id="first-name" name="first-name" required><br><br>
+          
+          <label for="last-name">Last Name:</label>
+          <input type="text" id="last-name" name="last-name" required><br><br>
+          
+          <label for="dob">Date of Birth:</label>
+          <input type="date" id="dob" name="dob" required><br><br>
+          
+          <label for="address">Address:</label>
+          <input type="text" id="address" name="address" required><br><br>
+          
+          <input type="submit" value="Submit" onclick="submitForm()">
+        </form>
+        
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2023 Golf League Organization</p>
+    </footer>
+  </body>
+</html>
