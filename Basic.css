@@ -3,6 +3,13 @@ body {
     margin: 0;
 }
 
+@media (max-width: 767px) {
+  body {
+    font-size: 14px;
+    background-color: white;
+  }
+}
+
 header {
     background-color: lightgray;
     padding: 10px;
