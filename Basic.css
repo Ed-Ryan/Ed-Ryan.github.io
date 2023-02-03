@@ -4,12 +4,9 @@ body {
 }
 
 header {
-    background-image: url("https://media.giphy.com/media/3og0IwyiqFjLc5dBw4/giphy.gif");
-    background-size: cover;
-    height: 100vh; /* Set the height of the header to the full viewport height */
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background-color: rgb(77, 101, 46);
+    padding: 10px;
+    text-align: center;
   }
 
 nav {
