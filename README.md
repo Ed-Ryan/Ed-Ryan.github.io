@@ -1,7 +1,7 @@
 <!--# Ed-Ryan.github.io
 My personal website
 -->
-<h1>Golf League Organization Website</h1>
+<h1>Saratoga Pride Golf League</h1>
 
 <p>A golf league organization website for golf enthusiasts to track scores, manage schedules, and connect with other players.</p>
 
