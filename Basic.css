@@ -6,14 +6,17 @@ body {
 header {
     background-image: url("https://media.giphy.com/media/3o7TKV0WqNdJULOACs/giphy.gif");
     background-size: cover;
-    height: 100vh; /* Set the height of the header to the full viewport height */
+    height: 100px; /* Set the height of the header to the full viewport height */
     display: flex;
     align-items: center;
     justify-content: center;
   }
   
   header h1 {
-    color: white;
+    background-image: -webkit-linear-gradient(60deg, #ff9933, #ff00cc, #33cc33, #33ccff, #cc00ff, #ff3300);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  margin: 0;
     text-shadow: 1px 1px black;
   }
 
