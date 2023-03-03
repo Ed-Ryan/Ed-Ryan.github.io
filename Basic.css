@@ -1,16 +1,27 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
+    background-color: rgb(250, 250, 210);
 }
 
 header {
-    background-color: rgb(77, 101, 46);
+    background-image: url('Header_photo.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-color: rgb(104, 139, 56);
+    height: 200px;
     padding: 10px;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size:36px;
   }
 
   nav {
-    background-color: gray;
+    background-color: rgb(104,139,56);
     display: flex;
     justify-content: flex-start;
     position: absolute;
@@ -34,11 +45,10 @@ header {
   
   .nav-tabs li {
     padding: 10px;
-    border-right: 1px solid black;
   }
   
   .nav-tabs a {
-    color: black;
+    color: white;
     text-decoration: none;
   }
   
@@ -55,34 +65,74 @@ section {
     padding: 20px;
 }
 
-#register form {
+table {
+  background-color: rgb(228, 228, 228);
+}
+
+#register-form {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 50px auto;
+    width: 50%;
+    border-radius: 10px;
+    padding: 20px;
 }
 
-#register label,
+#register-form label,
 #scores th {
     font-weight: bold;
     padding: 10px;
     text-align: left;
 }
 
-#register input[type="text"],
-#register input[type="email"] {
+#register-form input[type="text"],
+#register-form input[type="email"],
+#register-form input[type="date"],
+#register-form select {
     margin-bottom: 10px;
     padding: 10px;
     width: 200px;
+    border: 2px solid gray;
+    font-size: 16px;
+    color: black;
 }
+
+#register-form input[type="text"]:focus,
+#register-form input[type="email"]:focus {
+    outline: none;
+    border: 2px solid black;
+}
+
+#register-form input[type="radio"] {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+#register-form input[type="submit"] {
+  background-color:rgb(104, 139, 56);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 
 #scores table {
     border-collapse: collapse;
-    width: 100%;
+    width: 75%;
+    margin: 30px auto;
+}
+
+#scores thead {
+  background-color: rgb(104,139,56);
+  color: #fff;
 }
 
 #scores td,
 #scores th {
-    border: 1px solid gray;
+    border: 2px solid black;
     padding: 10px;
     text-align: left;
 }
@@ -91,4 +141,24 @@ footer {
     background-color: lightgray;
     padding: 10px;
     text-align: center;
+}
+
+.dropdown {
+  position: absolute;
+  right:0;
+  padding:10px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  background-color: rgb(250, 250, 210);
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 0px 10px;
+  right: 0;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }
