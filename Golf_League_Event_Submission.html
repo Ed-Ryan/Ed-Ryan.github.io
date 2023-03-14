@@ -5,7 +5,15 @@
     <meta content="Pride_Golf.png" alt="Logo">
     <title>Saratoga Pride Golf League - Event Idea Submission</title>
     <link rel="stylesheet" href="Basic.css">
-    <script src="Event_Submission_JS.js"></script>
+    <style>
+      /* Custom styles for the Google Form */
+      #gform iframe {
+        width: 100%;
+        height: 600px;
+        border: none;
+        border-radius: 5px;
+      }
+    </style>
   </head>
   <body>
     <nav>
@@ -27,36 +35,9 @@
       <h1> Event Idea Submission </h1>
     </header>
     <main>
-      <section id="register-form">
-        <form id="form" style="padding: 25px 50px; background-color: lightgray; border:none; border-radius:5px;">
-          <label for="background">*You will be recieving a confirmation via your perferred method of contact<br> if/when the event has been approved by the League!</label><br><br>
-
-          <label for="first-name">First Name:</label>
-          <input type="text" id="first-name" name="first-name" required><br><br>
-          
-          <label for="last-name">Last Name:</label>
-          <input type="text" id="last-name" name="last-name" required><br><br>
-          
-          <label for="digits">Phone Number:</label>
-          <input type="text" id="digits" name="digits" placeholder="(___)-___-____" required><br><br>
-
-          <label for="email">Email:</label>
-          <input type="text" id="email" name="email" required><br><br>
-
-          <label for="contact">If there are any question regarding your events details<br>how would you like to be contacted?</label><br>
-          <input type="radio" name="contact" value="email">Email<br>
-          <input type="radio" name="contact" value="phone">Text<br><br>
-
-          <label for="location">Location of Event:</label>
-          <input type="text" id="location" name="location" required><br><br>
-
-          <label for="reason">Reason for Event:</label>
-          <input type="text" id="reason" name="reason" required><br><br>
-
-          <center><input type="submit" value="Submit" onclick="submitForm()"></center>
-        </form>
-        
-      </section>
+      <div id="gform" style="width:50%; margin: 0 25%;">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfM4i6mT_e8wp9ULS1572wBf3tT4f_MjLfqpt9o61oCpmyYcQ/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+      </div>
     </main>
     <footer>
       <a href="https://www.facebook.com/groups/715451413235425"><img src="Pride_Golf.png" width="67" height="67" style="margin-right:20px"></a>
