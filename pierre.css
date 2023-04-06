@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Futura';
-  src: url('Futura/Futura\ Regular/Futura\ Regular.ttf');
+  src: url('Futura/Futura_Regular/Futura_Regular.ttf');
 }
 
 body {
@@ -21,12 +21,12 @@ body {
     font-size: 36px;
     font-weight: bold;
     top:0;
-    height: 85px;
+    height: 100px;
   }
 
-  @media screen and (max-width: 725px) {
+  @media screen and (max-width: 800px) {
     header {
-      height: 170px;
+      height: 200px;
     }
   }
   
@@ -36,6 +36,7 @@ body {
     height: 50px;
     position: relative;
     width: 100%;
+    padding-top:10px;
     /*margin: 20px auto 0;*/
     text-align: center;
     font-size: 20px;
@@ -135,7 +136,6 @@ body {
   @media screen and (max-width: 1000px) {
     table {
       display: block;
-
     }
   
     td {
@@ -143,6 +143,7 @@ body {
       display: block;
     }
   }
+
   img {
       max-width: 100%;
       max-height: 100%;
@@ -150,11 +151,10 @@ body {
   #family {
     height: 500px;
   }
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 800px) {
     img , #family {
       max-height: 75%;
       max-width: 75%;
-      margin: 0 12.5%;
     }
   }
 
@@ -164,8 +164,8 @@ body {
     padding: 20px;
     border: 1px solid #ddd;
     margin-bottom: 20px;
-    width: 50%;
-    margin: 0 25%;
+    width: 75%;
+    margin: 0 12.5%;
   }
   
   #about-resume h2 {
