@@ -88,9 +88,13 @@ body {
       text-align: center;
   }
   .popup-image {
-      max-width: 50%;
-      max-height: 50%;
+      max-width: 90%;
+      max-height: 90%;
   }
+  .popup-image1 {
+    max-width: 50%;
+    max-height: 50%;
+}
   #popup-description1 , #popup-description2 , #popup-description3 , #popup-description4 , #popup-description5 , #popup-description6 , #popup-description7 , #popup-description8{
     color: #ffffff;
     font-size: 28px;
