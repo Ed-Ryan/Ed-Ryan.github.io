@@ -1,12 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Roboto+Condensed&display=swap');
+/*
 @font-face {
   font-family: 'Futura';
   src: url('Futura/Futura_Regular/Futura_Regular.ttf');
-}
+}*/
 
 body {
     margin: 0 12.5%;
-    font-family: Arial, sans-serif;
-    font-family: futura;
+    /*font-family: Futura, sans-serif;
+    font-family: Futura;*/
+    font-family: 'Roboto Condensed', sans-serif;
     width: 75%;
     background-color: #ffffff;
     text-align: center;
@@ -17,7 +20,7 @@ body {
     color: #000000;
     text-align: center;
     position: Relative;
-    font-family: futura;
+    font-family: 'Roboto Condensed', sans-serif;
     font-size: 36px;
     font-weight: bold;
     top:0;
@@ -68,7 +71,7 @@ body {
     position: relative;
     bottom: 0;
     width: 100%;
-    font-family: futura;
+    font-family: 'Roboto Condensed', sans-serif;
   }
   .popup {
       display: none;
@@ -86,18 +89,20 @@ body {
       left: 50%;
       transform: translate(-50%, -50%);
       text-align: center;
+      width: 50%;
+      height: 50%;
   }
   .popup-image {
-      max-width: 90%;
-      max-height: 90%;
+      max-width: 100%;
+      max-height: 100%;
   }
   .popup-image2 {
-    max-width: 75%;
-    max-height: 75%;
+    max-width: 100%;
+    max-height: 100%;
 }
   .popup-image1 {
-    max-width: 50%;
-    max-height: 50%;
+    max-width: 100%;
+    max-height: 100%;
 }
   #popup-description1 , #popup-description2 , #popup-description3 , #popup-description4 , #popup-description5 , #popup-description6 , #popup-description7 , #popup-description8{
     color: #ffffff;
