@@ -140,17 +140,6 @@ body {
       text-align: center;
   }
 
-  @media screen and (max-width: 1000px) {
-    table {
-      display: block;
-    }
-  
-    td {
-      width: 100%;
-      display: block;
-    }
-  }
-
   img {
       max-width: 100%;
       max-height: 100%;
@@ -182,10 +171,15 @@ body {
   }
 
   #about-resume h3 {
-    font-size: 24px;
+    font-size: 26px;
   }
   
   #about-resume h4 {
+    font-size: 22px;
+    text-align: left;
+    font-weight: bold;
+  }
+  #about-resume h6 {
     font-size: 18px;
     text-align: left;
   }
