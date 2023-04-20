@@ -1,69 +1,170 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Pierre Fontaine Portfolio</title>
-  <link rel="stylesheet" id="stylesheet" href="pierre.css">
-  <meta name="keywords" content="2D Illustrations, 3D Illustration, Design, Paper Models, Paper Engineering, Pierre Fontaine">
-</head>
-<body>
-  <header>
-    <h1>Pierre Fontaine Portfolio</h1>
-  </header>
-  <nav>
-    <a href="index.html" style="font-weight:bold;">Home</a>
-    <a href="aboutme.html">About Me</a>
-    <a href="illustrations.html">Illustrations</a>
-    <a href="animation.html">Animation</a>
-    <a href="paper.html">Paper Engineering</a>
-    <a href="design.html">Design</a>
-  </nav>
-  
-  <!-- Add the main content of the website here -->
+  <head>
+    <meta charset="UTF-8" />
+    <title>Edward Ryan's Portfolio</title>
+    <link rel="stylesheet" href="light_home.css" id="stylesheet">
+    <script>
+      // check for saved mode setting in localStorage
+      const mode = localStorage.getItem("mode");
+        if (mode !== null) {
+          document.body.classList.add(`${mode}-mode`);
+          document.getElementById("stylesheet").href = `${mode}.css`;
+        }
+    </script>
+    <script>
+      function toggleMode() {
+        const body = document.body;
+        const stylesheet = document.getElementById("stylesheet");
+        const button = document.getElementById("mode-toggle-button");
+        if (body.classList.contains("dark-mode")) {
+          body.classList.remove("dark-mode");
+          stylesheet.href = "light_home.css";
+          button.src = "Dark_mode.png";
+          localStorage.setItem("mode", "light");
+        } else {
+          body.classList.add("dark-mode");
+          stylesheet.href = "dark_home.css";
+          button.src = "Light_mode.png";
+          localStorage.setItem("mode", "dark");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <header style="padding-bottom:10px;">
+      <img id="mode-toggle-button" src="Dark_mode.png" alt="Toggle mode" style="display:flex; height:36px; width:36px; border:none; position:absolute; top:0; left:12.5%; cursor: pointer; padding: 0;" onclick="toggleMode()">
+    </header>
+    <nav class="start-nav">
+      <a href="intro.html">Introduction</a>
+      <a href="resume.html">Resume</a>
+      <a href="works.html">Previous Works</a>
+    </nav>
 
-  <p></p><br>
-  <table>
-    <tr>
-      <td>
-        <div class="slideshow-container">
-          <div class="mySlides fade">
-            <img src="2D_illi/cartoon/nightshirt_copy.jpg" style="max-height:500px; padding-left:1em;">
-          </div>
-          <div class="mySlides fade">
-            <img src="2D_illi/space/curvy_ship.jpg" style="max-height: 500px;">
-          </div>
-          <div class="mySlides fade">
-            <img src="2D_illi/3D_misc/Flamingo_Cup_Side.png" style="max-height: 500px;">
-          </div>
-          <div class="mySlides fade">
-            <img src="paper/Hudson.jpg" style="max-height: 500px;">
-          </div>
-        </div><br>
-        <script>
-          var slideIndex = 0;
-          showSlides();
-          function showSlides() {
-            var i;
-            var slides = document.getElementsByClassName("mySlides");
-            for (i = 0; i < slides.length; i++) {
-              slides[i].style.display = "none";
+    <div class="hero">
+      <h1 id="typed-text"></h1>
+      <div id="particles-js"></div>
+    </div>
+
+    <div id="foot">
+      <a href="https://www.linkedin.com/in/edward-ryan-782015173/"><img src="linkedin.png" height="50px" width="50px;" style="padding-right:20px"></a><a href="https://github.com/Ed-Ryan"><img src="github.png" height="50px" width="50px" style="padding-left:20px"></a>
+    </div>
+    <script>
+      const text = "Edward Ryan's Portfolio";
+      const delay = 125; // delay between each character in milliseconds
+      let index = 0;
+      let isDeleting = false;
+
+      function typeAndErase() {
+        const typedText = document.getElementById("typed-text");
+
+        if (isDeleting) {
+          typedText.textContent = text.substring(0, index - 1);
+          index--;
+        } else {
+          typedText.textContent = text.substring(0, index + 1);
+          index++;
+        }
+
+        if (index === text.length + 1) {
+          isDeleting = true;
+        } else if (index === 0) {
+          isDeleting = false;
+        }
+
+        const nextDelay = isDeleting ? delay / 2 : delay;
+
+        setTimeout(typeAndErase, nextDelay);
+      }
+
+      typeAndErase();
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+      particlesJS("particles-js", {
+        particles: {
+          number: { value: 40, density: { enable: true, value_area: 800 } },
+          color: { value: "#27cf14" },
+          shape: {
+            type: "circle",
+            stroke: { width: 0, color: "#38be25" },
+            polygon: { nb_sides: 5 },
+            image: { src: "img/github.svg", width: 100, height: 100 },
+          },
+          opacity: {
+            value: 0.5,
+            random: false,
+            anim: { enable: false, speed: 1, opacity_min: 0.1, sync: false },
+          },
+          size: {
+            value: 5,
+            random: true,
+            anim: { enable: false, speed: 40, size_min: 0.1, sync: false },
+          },
+          line_linked: {
+            enable: true,
+            distance: 150,
+            color: "#012345",
+            opacity: 0.4,
+            width: 1,
+          },
+          move: {
+            enable: true,
+            speed: 6,
+            direction: "none",
+            "random": false,
+            "straight": false,
+            "out_mode": "out",
+            "bounce": false,
+            "attract": {
+                "enable": false,
+                "rotateX": 600,
+                "rotateY": 1200
+                }
             }
-            slideIndex++;
-            if (slideIndex > slides.length) {
-              slideIndex = 1;
+        },
+        "interactivity": {
+            "detect_on": "canvas",
+            "events": {
+            "onhover": {
+                "enable": true,
+                "mode": "grab"
+            },
+            "onclick": {
+                "enable": true,
+                "mode": "push"
+            },
+            "resize": true
+            },
+            "modes": {
+                "grab": {
+                    "distance": 300,
+                    "line_linked": {
+                    "opacity": 1
+                    }
+                },
+                "bubble": {
+                    "distance": 800,
+                    "size": 80,
+                    "duration": 2,
+                    "opacity": 0.8,
+                    "speed": 3
+                },
+                "repulse": {
+                    "distance": 400,
+                    "duration": 0.4
+                },
+                "push": {
+                    "particles_nb": 4
+                },
+                "remove": {
+                    "particles_nb": 2
+                }
             }
-            slides[slideIndex-1].style.display = "block";
-            setTimeout(showSlides, 5000);
-          }
-        </script>
-      </td>
-    </tr>
-  </table>
-  
-  <!-- Add the website footer -->
-  <footer>
-    <p>© 2023 Pierre Fontaine's Portfolio. All rights reserved.</p>
-    <p>Home: (914) 693-2356 | Mobile: (914) 413-2789</p>
-    <p>pfontaine123@hotmail.com </p>
-  </footer>
+        },
+        "retina_detect": true
+    })
+    </script>
 </body>
 </html>

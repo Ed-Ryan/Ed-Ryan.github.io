@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edward Ryan's Portfolio - Resume</title>
+  <link rel="stylesheet" href="light.css" id="stylesheet">
+  <script>
+    const mode = localStorage.getItem("mode");
+    if (mode !== null) {
+      document.body.classList.add(`${mode}-mode`);
+      document.getElementById("stylesheet").href = `${mode}.css`;
+    }
+  </script>
+  <script>
+    function toggleMode() {
+      const body = document.body;
+      const stylesheet = document.getElementById("stylesheet");
+      const button = document.getElementById("mode-toggle-button");
+      if (body.classList.contains("dark-mode")) {
+        body.classList.remove("dark-mode");
+        stylesheet.href = "light.css";
+        button.src = "Dark_mode.png";
+        localStorage.setItem("mode", "light");
+      } else {
+        body.classList.add("dark-mode");
+        stylesheet.href = "dark.css";
+        button.src = "Light_mode.png";
+        localStorage.setItem("mode", "dark");
+      }
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <img id="mode-toggle-button" src="Dark_mode.png" alt="Toggle mode" style="height:24px; width:24px; border:none; position:absolute; top:0; left:0; cursor: pointer; padding: 5px" onclick="toggleMode()">
+    Edward Ryan's Portfolio - Resume
+  </header>
+  <nav>
+    <ul>
+      <li style="font-size: 22px;"><a href="intro.html">Introduction</a></li>
+      <li style="font-size: 22px;"><a href="resume.html">Resume</a></li>
+      <li style="font-size: 22px;"><a href="works.html">Previous Works</a></li>
+    </ul>
+  </nav>
+  <main>
+    <div class="button-container">
+      <br><a href="Edward_Ryan_Resume_4.13.23.pdf" download><button class="download-button">Download Resume</button></a>
+  </div>
+  <section id="resume">
+      <div class="terminal">
+        <div class="terminal-header">
+          <div class="terminal-btn terminal-btn-close"></div>
+          <div class="terminal-btn terminal-btn-minimize"></div>
+          <div class="terminal-btn terminal-btn-maximize"></div>
+        </div>
+        <div class="terminal-body">
+          <div class="terminal-caller">
+              <span>$</span>cat Resume_Header.html
+            </div>
+          <div id="res-head">
+              <h1 style="text-align: center; font-size: 30px;">Edward Ryan</h1>
+              <div style="text-align: center; font-size: 18px;">
+                  <p>Ardsley, NY, USA | ed.ryan127@gmail.com | +1 (518)-538-2710</p>
+              </div>
+              <p style="border-bottom: 3px solid black; width:95%; margin: 0 2.5%;"></p>
+          </div><br>
+          <div class="terminal-caller">
+              <span>$</span>cat Summary_Resume.html
+            </div>
+          <div style="border-bottom: 3px solid black; width: 95%; margin: 0 2.5%;">
+              <h1 style="font-size: 30px;">Summary</h1>
+              <p style="font-size: 18px;">Hi, my name is Edward Ryan and I am a Front-End Developer with a specialization in HTML, CSS, and JavaScript. I have created visually appealing and user-friendly websites for clients in various industries, resulting in increased exposure and higher engagement. I pride myself on my programming skills and have successfully collaborated with clients to create customized solutions that meet their specific requirements. Additionally, I possess knowledge in back-end programming with Python, C++, C, PHP, and Java, and database management with SQL, MatLab, LabVIEW, R, and Excel.<br><br>In terms of education, I have a MSc. in Physics from the University of Surrey, graduating with Merit, and a BS. in Physics from SUNY Brockport, with minors in Computer Science and Mathematics. I have a certificate in Google Data Analytics from Google as well.<br><br>As for my skills, I am proficient in front-end programming languages such as HTML, CSS, and JavaScript, back-end programming languages including Python, C++, C, PHP, and Java, and database management software such as SQL, MatLab, LabVIEW, R, and Excel. I am also proficient in operating systems such as Windows, Linux, Mac, and Chrome, as well as software such as Shell, LaTex, Tableau, Git, and MIPS.<br><br>I possess a variety of soft skills, including adaptability, attention to detail, communication, creativity, problem-solving, teamwork and collaboration, and time management.<br><br>In terms of experience, I have worked as a Front-End Developer for Lev Oisin since December 2022 and am currently working on a project for artist's portfolio. I have also designed a visually engaging static website for the Saratoga Pride Golf League, conducting thorough testing and debugging using Visual Studio's terminal for seamless functionality across devices and browsers.<br><br>In my research experience, I have utilized Python libraries such as AstroPy, NumPy, SciPy, and Matplotlib to process and analyze dark and flat field images for Astrophysics Imaging and Spectroscopy Research General Relativity at the University of Surrey. At SUNY Brockport, I programmed a C/C++ application for a robotic car's navigation using line tracking, sunlight, and ethanol detection.<br><br>In addition to my scientific research experience, I have worked as a Teaching Assistant at SUNY Brockport, assisting in teaching undergraduate physics courses by conducting laboratory sections, and as the Treasurer for Brockport Student Government, improving organizational efficiency by implementing software conversions during staff training.</p>
+          </div>
+          <div class="terminal-caller">
+              <span>$</span>cat Experience_Resume.html
+            </div>
+          <div style="border-bottom:3px solid black;width:95%; margin: 0 2.5%;">
+              <h1 style="font-size: 30px;">Experience</h1>
+              <h4 style="font-size: 24px;">
+                <span>Freelance Front-End Developer - Lev Oisin</span>
+                <span style="float:right; font-weight:lighter;">Dec 2022 - Present</span>
+              </h4>
+              <ul style="padding-bottom:25px;">
+                <li style="font-size:18px;">Developed responsive and accessible static websites using HTML, CSS, and JavaScript, resulting in improved user experience, user interface and increased traffic.</li>
+                <li style="font-size:18px;">Collaborated with clients to identify requirements, using Agile methodologies, to deliver a customized solution that met their needs, ensuring client satisfaction.</li>
+                <li style="font-size:18px;">Designed and developed visually engaging static website using CSS frameworks and JavaScript libraries, resulting in increased visibility and exposure for clients businesses.</li>
+                <li style="font-size:18px;">Conducted cross-browser testing through a version control system Git/GitHub while testing and debugging functions utilizing Visual Studios.</li>
+              </ul>
+              <h4 style="font-size: 24px;">
+                <span>Head Coach / Manager - University of Surrey Baseball & Softball Society</span>
+                <span style="float:right; font-weight:lighter;">Sep 2021 - Nov 2022</span>
+              </h4>
+              <ul style="padding-bottom:25px;">
+                <li style="font-size:18px;">Utilized strong leadership skills to manage a team of athletes, motivating and inspiring them to reach their full potential, resulting in a winning season and making it to the national tournament.</li>
+                <li style="font-size:18px;">Employed effective communication skills to clearly convey game strategies and provide constructive feedback to team members, resulting in improved individual and team performance.</li>
+              </ul>
+              <h4 style="font-size: 24px;">
+                <span>Teaching Assistant - SUNY Brockport</span>
+                <span style="float:right; font-weight:lighter;">Aug 2018 - May 2021</span>
+              </h4>
+              <ul style="padding-bottom:25px;">
+                <li style="font-size:18px;">Assisted in teaching undergraduate physics courses by conducting laboratory sections.</li>
+              </ul>
+              <h4 style="font-size: 24px;">
+                <span>Treasurer - Brockport Student Government</span>
+                <span style="float:right; font-weight:lighter;">Jun 2019 - Sep 2020</span>
+              </h4>
+              <ul style="padding-bottom:25px;">
+                <li style="font-size:18px;">Implemented software conversions during staff training to improve organizational efficiency, showcasing proficiency in technological solutions and the ability to train others.</li>
+                <li style="font-size:18px;">Managed budgets and ensured adherence to policies and regulations for 132 clubs, demonstrating strong organizational and analytical skills.</li>
+              </ul>
+          </div>
+          <div class="terminal-caller">
+              <span>$</span>cat Research_Experience_Resume.html
+            </div>
+          <div style="border-bottom:3px solid black;width:95%; margin: 0 2.5%;">
+            <h1 style="font-size: 30px;">Research Experience</h1>
+            <h4 style="font-size: 24px;">
+              <span>Dissertation: Simulation Analysis of a Periodically Strucred Dielectric Material</span>
+              <span style="float:right; font-weight:lighter;">University of Surrey</span>
+            </h4>
+            <ul style="padding-bottom:25px;">
+              <li style="font-size:18px;">Utilized Lumerical to create a 3D rendering of the dielectric material.</li>
+              <li style="font-size:18px;">Conducted data analysis using MatLab.</li>
+            </ul>
+            <h4 style="font-size: 24px;">
+              <span>Astrophysicsal Research using Imaging, Spectroscopy and General Relativity</span>
+              <span style="float:right; font-weight:lighter;">Oct 2021 - May 2022</span>
+            </h4>
+            <ul style="padding-bottom:25px;">
+              <li style="font-size:18px;">Optimized Python code for performance by implementing multi-threading, multiprocessing, and distributed computing techniques.</li>
+              <li style="font-size:18px;">Conducted extensive testing of Python code and implemented unit tests to ensure the accuracy and validity of research findings.</li>
+              <li style="font-size:18px;">Programmed Python algorithms to process and analyze dark and flat field images using libraries such as AstroPy, NumPy, SciPy, and Matplotlib.</li>
+              <li style="font-size:18px;">Employed Python and DS9 algorithms to extract data from astronomical images and investigate properties and characteristics of solar systems.</li>
+            </ul>
+            <h4 style="font-size: 24px;">
+              <span>Research Project: Magneto-Optic Kerr Effect</span>
+              <span style="float:right; font-weight:lighter;">SUNY Brockport</span>
+            </h4>
+            <ul style="padding-bottom:25px;">
+              <li style="font-size:18px;">Utilized Autodesk Fusion 360 to design 3D MOKE schematics.</li>
+              <li style="font-size:18px;">Conducted data analysis using Microsoft Excel.</li>
+            </ul>
+            <h4 style="font-size: 24px;">
+              <span>Arduino Mars Rover</span>
+              <span style="float:right; font-weight:lighter;">Jan 2020 - May 2020</span>
+            </h4>
+            <ul style="padding-bottom:25px;">
+              <li style="font-size:18px;">Designed and developed a robust C/C++ application to facilitate precise navigation of a robotic car using line tracking, sunlight, and ethanol detection.</li>
+              <li style="font-size:18px;">Implemented C++ algorithms to optimize the performance of the robotic car and ensure accurate and reliable detection of environmental conditions.</li>
+              <li style="font-size:18px;">Integrated C/C++ code with various hardware components of the robotic car such as sensors, motors, and controllers, ensuring smooth communication and seamless operation.</li>
+              <li style="font-size:18px;">Implemented multi-threading and multiprocessing techniques in C++ to improve application performance and reduce response time.</li>
+            </ul>
+        </div>
+        <div class="terminal-caller">
+          <span>$</span>cat Edu_Skills_Cert_Resume.html
+        </div>
+          <div style="padding:5px; width: 95%; margin: 0 2.5%;">
+              <table style="align-items:normal;">
+                  <tr>
+                      <td style="font-size:24px; font-weight: bold; padding: 0; width:25%;">Education:</td>
+                      <td style="font-size:24px; font-weight: bold; padding: 0; width:25%;">Programming Skills:</td>
+                      <td style="font-size:24px; font-weight: bold; padding: 0; width:25%;">Soft Skills:</td>
+                      <td style="font-size:24px; font-weight: bold; padding: 0; width:25%;">Certificate:</td>
+                  </tr>
+                  <tr>
+                      <td style=" width:28%;">
+                          <div>
+                              <p style="font-size:18px; padding: 0;">MSc. in Physics | University of Surrey | 2022</p>
+                              <p style="font-size:18px; padding: 0;">BS. in Physics | SUNY Brockport | 2021</p>
+                              <p style="font-size:18px; padding: 0; color: transparent;">You have found the</p>
+                              <p style="font-size:18px; padding: 0; color: transparent;">Secret Message, and</p>
+                              <p style="font-size:18px; padding: 0; color: transparent;">To that I say...</p>
+                          </div>
+                      </td>
+                      <td style=" width:25%;">
+                          <div>
+                              <p style="font-size:18px; padding: 0;">Front-End: HTML, CSS, JavaScript</p>
+                              <p style="font-size:18px; padding: 0;">Back-End: Python, C++, C, PHP, Java</p>
+                              <p style="font-size:18px; padding: 0;">DB: SQL, MatLab, LabVIEW, R, Excel</p>
+                              <p style="font-size:18px; padding: 0;">OS: Windows, Linux, Mac, Chrome</p>
+                              <p style="font-size:18px; padding: 0;">Misc: Shell, LaTex, Tableau, Git, MIPS</p>
+                          </div>
+                      </td>
+                      <td style=" width:25%;">
+                          <div>
+                              <p style="font-size:18px;">Adaptability, Attention to Detail</p>
+                              <p style="font-size:18px;">Communication, Creativity</p>
+                              <p style="font-size:18px;">Problem-solving, Teamwork & Collaboration</p>
+                              <p style="font-size:18px;">Time Management</p>
+                              <p style="font-size:18px; padding: 0; color: transparent;">Not a secret message.</p>
+                          </div>
+                      </td>
+                      <td style=" width:22%;">
+                          <div>
+                              <p style="font-size:18px;">Google Data Analytics | Google | 2022</p>
+                              <p style="font-size:18px; padding: 0; color: transparent;">Congrats, I thought</p>
+                              <p style="font-size:18px; padding: 0; color: transparent;">I hid this pretty well</p>
+                              <p style="font-size:18px; padding: 0; color: transparent;">but I guess I did not.</p>
+                              <p style="font-size:18px; padding: 0; color: transparent;">Keep it a secret!</p>
+                          </div>
+                      </td>
+                  </tr>
+              </table>
+          </div>
+        </div>
+        <div class="terminal-footer">
+          <span>$</span><p class="blink">_</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>
+      <a href="https://www.linkedin.com/in/edward-ryan-782015173/"><img src="linkedin.png" height="50px" width="50px;" style="padding-right:20px"></a><a href="https://github.com/Ed-Ryan"><img src="github.png" height="50px" width="50px" style="padding-left:20px"></a><br>
+      Cell / WhatsApp +1 (518)-538-2710 | Email ed.ryan127@gmail.com<br>
+      &copy; 2023 Edward Ryan
+    </p>
+  </footer>
+</body>
+</html>
