@@ -1,170 +1,623 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Edward Ryan's Portfolio</title>
-    <link rel="stylesheet" href="light_home.css" id="stylesheet">
-    <script>
-      // check for saved mode setting in localStorage
-      const mode = localStorage.getItem("mode");
-        if (mode !== null) {
-          document.body.classList.add(`${mode}-mode`);
-          document.getElementById("stylesheet").href = `${mode}.css`;
-        }
-    </script>
-    <script>
-      function toggleMode() {
-        const body = document.body;
-        const stylesheet = document.getElementById("stylesheet");
-        const button = document.getElementById("mode-toggle-button");
-        if (body.classList.contains("dark-mode")) {
-          body.classList.remove("dark-mode");
-          stylesheet.href = "light_home.css";
-          button.src = "Dark_mode.png";
-          localStorage.setItem("mode", "light");
-        } else {
-          body.classList.add("dark-mode");
-          stylesheet.href = "dark_home.css";
-          button.src = "Light_mode.png";
-          localStorage.setItem("mode", "dark");
-        }
-      }
-    </script>
-  </head>
-  <body>
-    <header style="padding-bottom:10px;">
-      <img id="mode-toggle-button" src="Dark_mode.png" alt="Toggle mode" style="display:flex; height:36px; width:36px; border:none; position:absolute; top:0; left:12.5%; cursor: pointer; padding: 0;" onclick="toggleMode()">
-    </header>
-    <nav class="start-nav">
-      <a href="intro.html">Introduction</a>
-      <a href="resume.html">Resume</a>
-      <a href="works.html">Previous Works</a>
-    </nav>
+<html lang="en">
 
-    <div class="hero">
-      <h1 id="typed-text"></h1>
-      <div id="particles-js"></div>
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Edward Ryan's Portfolio</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="my_logo.png" rel="icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="container">
+
+      <h1><a href="index.html">Edward Ryan</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a> -->
+      <h2>I'm a passionate <span>Developer</span> from New York</h2>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link active" href="#header">Home</a></li>
+          <li><a class="nav-link" href="#about">About</a></li>
+          <li><a class="nav-link" href="#resume">Resume</a></li>
+          <li><a class="nav-link" href="#portfolio">Portfolio</a></li>
+          <li><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+      <div class="social-links">
+        <a href="https://github.com/Ed-Ryan" class="github"><i class="bi bi-github"></i></a>
+        <a href="https://www.linkedin.com/in/edward-ryan-782015173/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+      </div>
+
     </div>
+  </header><!-- End Header -->
 
-    <div id="foot">
-      <a href="https://www.linkedin.com/in/edward-ryan-782015173/"><img src="linkedin.png" height="50px" width="50px;" style="padding-right:20px"></a><a href="https://github.com/Ed-Ryan"><img src="github.png" height="50px" width="50px" style="padding-left:20px"></a>
+  <!-- ======= About Section ======= -->
+  <section id="about" class="about">
+
+    <!-- ======= About Me ======= -->
+    <div class="about-me container">
+
+      <div class="section-title">
+        <h2>About</h2>
+        <p>Learn more about me</p>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-4" data-aos="fade-right">
+          <img src="my_pic.png" class="img-fluid" alt=""">
+        </div>
+        <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
+          <h3>Physicist &amp; Software Developer</h3>
+          <p class="fst-italic">
+            Hey, I'm Edward Ryan, a curious mind passionate about Physics and programming. I love diving into STEM advancements, especially in Physics. When I'm not immersed in the world of science, I enjoy gaming and exploring virtual realms. Baseball and golf are my other interests, providing excitement and relaxation. Let's chat about Physics, exchange gaming tips, discuss baseball, or plan a golf outing.
+          </p>
+          <div class="row">
+            <div class="col-lg-6">
+              <ul>
+                <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>27 Jan 1999</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>www.ed-ryan.github.io</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+1 518 538 2710</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Home:</strong> <span>New York, USA and Virgina, USA</span></li>
+              </ul>
+            </div>
+            <div class="col-lg-6">
+              <ul>
+                <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>24</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Highest Degree:</strong> <span>Masters of Science, Physics</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>email@example.com</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Availability:</strong> <span>Currently Available</span></li>
+              </ul>
+            </div>
+          </div>
+          <p>
+            I'm a coding enthusiast passionate about backend languages like Python and C++, and scientific tools like MatLab. Research, automation, and creative problem-solving excite me. In addition, I've embarked on a journey into the realm of machine learning, diving into projects that harness its potential. From data analysis to predictive models, I'm eager to explore the possibilities. With a strong foundation in freelance front-end development using HTML, CSS, and JS. Whether it's diving into backend complexities or creating captivating front-end experiences, count me in for the coding adventure! Let's collaborate and bring ideas to life.
+          </p>
+        </div>
+      </div>
+
+    </div><!-- End About Me -->
+
+    <!-- ======= Counts ======= -->
+    <div class="counts container">
+
+      <div class="row">
+
+        <div class="col-lg-3 col-md-6">
+          <div class="count-box">
+            <i class="bi bi-emoji-smile"></i>
+            <span data-purecounter-start="0" data-purecounter-end="47" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Collaborated With</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
+          <div class="count-box">
+            <i class="bi bi-journal-richtext"></i>
+            <span data-purecounter-start="0" data-purecounter-end="73" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Projects</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+          <div class="count-box">
+            <i class="bi bi-headset"></i>
+            <span data-purecounter-start="0" data-purecounter-end="1382" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Hours Of Coding</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+          <div class="count-box">
+            <i class="bi bi-award"></i>
+            <span data-purecounter-start="0" data-purecounter-end="2" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Certificates</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div><!-- End Counts -->
+
+    <!-- ======= Skills  ======= -->
+    <div class="skills container">
+
+      <div class="section-title">
+        <h2>Skills</h2>
+      </div>
+
+      <div class="row skills-content">
+
+        <div class="col-lg-6">
+
+          <div class="progress">
+            <span class="skill">HTML <i class="val">80%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+
+          <div class="progress">
+            <span class="skill">CSS <i class="val">75%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+
+          <div class="progress">
+            <span class="skill">JavaScript <i class="val">55%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+          <br><br>
+          <div class="progress">
+            <span class="skill">Excel <i class="val">100%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+
+          <div class="progress">
+            <span class="skill">SQL <i class="val">45%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+
+          <div class="progress">
+            <span class="skill">Shell <i class="val">30%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+
+          <div class="progress">
+            <span class="skill">Python <i class="val">95%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+
+          <div class="progress">
+            <span class="skill">MatLab <i class="val">80%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+
+          <div class="progress">
+            <span class="skill">C++ <i class="val">55%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+          <br><br>
+          <div class="progress">
+            <span class="skill">Windows <i class="val">100%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+
+          <div class="progress">
+            <span class="skill">Linux <i class="val">95%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+
+          <div class="progress">
+            <span class="skill">MacOS <i class="val">60%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div><!-- End Skills -->
+
+    <!-- ======= Interests ======= -->
+    <div class="interests container">
+
+      <div class="section-title">
+        <h2>Interests</h2>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-3 col-md-4">
+          <div class="icon-box">
+            <i class="ri-plane-fill" style="color: #ffbb2c;"></i>
+            <h3>Travel</h3>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
+          <div class="icon-box">
+            <i class="ri-gamepad-line" style="color: #5578ff;"></i>
+            <h3>Video Games</h3>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
+          <div class="icon-box">
+            <i class="ri-code-box-fill" style="color: #e80368;"></i>
+            <h3>Coding</h3>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 mt-4 mt-lg-0">
+          <div class="icon-box">
+            <i class="ri-window-2-line" style="color: #e361ff;"></i>
+            <h3>Surfing the Internet</h3>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 mt-4">
+          <div class="icon-box">
+            <i class="ri-tv-2-fill" style="color: #47aeff;"></i>
+            <h3>Watching TV</h3>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 mt-4">
+          <div class="icon-box">
+            <i class="ri-pulse-fill" style="color: #ffa76e;"></i>
+            <h3>Working Out</h3>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 mt-4">
+          <div class="icon-box">
+            <i class="ri-microscope-line" style="color: #11dbcf;"></i>
+            <h3>Reading about Science</h3>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 mt-4">
+          <div class="icon-box">
+            <i class="ri-car-line" style="color: #4233ff;"></i>
+            <h3>Driving Around</h3>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- End Interests -->
+
+  </section><!-- End About Section -->
+
+  <!-- ======= Resume Section ======= -->
+  <section id="resume" class="resume">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Resume</h2>
+        <p>Check out my Resume</p>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-6">
+          <h3 class="resume-title">Summary</h3>
+          <div class="resume-item pb-0">
+            <h4>Edward Ryan</h4>
+            <p><em>I'm a skilled physicist who loves diving into research and software development. I've delved into the fascinating world of astrophysics, optimizing Python code and conducting thorough tests. Plus, I've got hands-on experience developing a slick C/C++ Arduino app for robotic car navigation. I'm fluent in both front-end and back-end languages, along with database management. With strong problem-solving skills and a team-oriented mindset, I'm ready to take on any challenge.</em></p>
+            <p>
+            <ul>
+              <li>Certified in Machine Learning and Google Data Analytics.</li>
+              <li> MSc in Physics and BS in Physics with minors in Computer Science and Mathematics.</li>
+              <li>Jack of all trades with front-end, back-end, and databases.</li>
+              <li>Astrophysical research and optimization of Python code.</li>
+              <li>Developed a C/C++ application for robotic car navigation.</li>
+            </ul>
+            </p>
+          </div>
+
+          <h3 class="resume-title">Education</h3>
+          <div class="resume-item">
+            <h4>Master of Science - Physics</h4>
+            <h5>2021 - 2022</h5>
+            <p><em>University of Surrey - Guildford, UK</em></p>
+            <p>I tackled my dissertation by diving deep into Periodically Structured Dielectric Materials, utilizing Lumerical and MatLab.</p>
+          </div>
+          <div class="resume-item">
+            <h4>Bachelor of Science - Physics</h4>
+            <h5>2017 - 2021</h5>
+            <p><em>SUNY Brockport, Brockport, NY</em></p>
+            <p>Minored in Computer Science and Mathematics.</p>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <h3 class="resume-title">Professional Experience</h3>
+          <div class="resume-item">
+            <h4>Front-End Developer / Web Developer</h4>
+            <h5>Dec 2022 - Jun 2023</h5>
+            <p><em>Freelance, Remote </em></p>
+            <p>
+            <ul>
+              <li>Collaborated closely with clients to create visually appealing and user-friendly websites, ensuring their specific needs and requirements were met.</li>
+              <li>Provided expert designs and leveraged front-end development skills to enhance the user experience and interface of static websites.</li>
+              <li>Successfully delivered customized solutions that resulted in improved visibility, increased traffic, and enhanced user engagement for clients' businesses.</li>
+            </ul>
+            </p>
+          </div>
+          <div class="resume-item">
+            <h4>Head Coach / Manager</h4>
+            <h5>Sep 2021 - Nov 2022</h5>
+            <p><em>University of Surrey Baseball / Softball Society, Guildford, UK</em></p>
+            <p>
+            <ul>
+              <li>Utilized strong leadership skills to manage a team of athletes, motivating and inspiring them to reach their full potential, resulting in a winning season and making it to the national tournament.</li>
+              <li>Employed effective communication skills to clearly convey game strategies and provide constructive feedback to team members, resulting in improved individual and team performance.</li>
+            </ul>
+            </p>
+          </div>
+          <div class="resume-item">
+            <h4>Teaching Assistant</h4>
+            <h5>Aug 2018 - May 2021</h5>
+            <p><em>SUNY Brockport, Brockport, NY</em></p>
+            <p>
+            <ul>
+              <li>Assisted in teaching undergraduate physics courses by conducting laboratory sections, providing demonstrations and leading experiments to explain the principles of electromagnetism, newtonian physics, and optics.</li>
+            </ul>
+            </p>
+          </div>
+        </div>
+      </div>
+
     </div>
-    <script>
-      const text = "Edward Ryan's Portfolio";
-      const delay = 125; // delay between each character in milliseconds
-      let index = 0;
-      let isDeleting = false;
+  </section><!-- End Resume Section -->
 
-      function typeAndErase() {
-        const typedText = document.getElementById("typed-text");
+  <!-- ======= Portfolio Section ======= -->
+  <section id="portfolio" class="portfolio">
+    <div class="container">
 
-        if (isDeleting) {
-          typedText.textContent = text.substring(0, index - 1);
-          index--;
-        } else {
-          typedText.textContent = text.substring(0, index + 1);
-          index++;
-        }
+      <div class="section-title">
+        <h2>Portfolio</h2>
+        <p>My Works</p>
+      </div>
 
-        if (index === text.length + 1) {
-          isDeleting = true;
-        } else if (index === 0) {
-          isDeleting = false;
-        }
+      <div class="row">
+        <div class="col-lg-12 d-flex justify-content-center">
+          <ul id="portfolio-flters">
+            <li data-filter="*" class="filter-active">All</li>
+            <li data-filter=".filter-app">Science</li>
+            <li data-filter=".filter-card">Web Dev</li>
+            <li data-filter=".filter-web">Software Dev</li>
+          </ul>
+        </div>
+      </div>
 
-        const nextDelay = isDeleting ? delay / 2 : delay;
+      <div class="row portfolio-container">
 
-        setTimeout(typeAndErase, nextDelay);
-      }
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <img src="assets/img/portfolio/Surrey.png" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Simulation of Dielectric Materials</h4>
+              <p>Science</p>
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/Dielectric_Materials.pdf" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
 
-      typeAndErase();
-    </script>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="portfolio-wrap">
+            <img src="assets/img/portfolio/to-do.png" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>To-do List App</h4>
+              <p>Software Dev</p>
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/to-do-python-2.mp4" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
 
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script>
-      particlesJS("particles-js", {
-        particles: {
-          number: { value: 40, density: { enable: true, value_area: 800 } },
-          color: { value: "#27cf14" },
-          shape: {
-            type: "circle",
-            stroke: { width: 0, color: "#38be25" },
-            polygon: { nb_sides: 5 },
-            image: { src: "img/github.svg", width: 100, height: 100 },
-          },
-          opacity: {
-            value: 0.5,
-            random: false,
-            anim: { enable: false, speed: 1, opacity_min: 0.1, sync: false },
-          },
-          size: {
-            value: 5,
-            random: true,
-            anim: { enable: false, speed: 40, size_min: 0.1, sync: false },
-          },
-          line_linked: {
-            enable: true,
-            distance: 150,
-            color: "#012345",
-            opacity: 0.4,
-            width: 1,
-          },
-          move: {
-            enable: true,
-            speed: 6,
-            direction: "none",
-            "random": false,
-            "straight": false,
-            "out_mode": "out",
-            "bounce": false,
-            "attract": {
-                "enable": false,
-                "rotateX": 600,
-                "rotateY": 1200
-                }
-            }
-        },
-        "interactivity": {
-            "detect_on": "canvas",
-            "events": {
-            "onhover": {
-                "enable": true,
-                "mode": "grab"
-            },
-            "onclick": {
-                "enable": true,
-                "mode": "push"
-            },
-            "resize": true
-            },
-            "modes": {
-                "grab": {
-                    "distance": 300,
-                    "line_linked": {
-                    "opacity": 1
-                    }
-                },
-                "bubble": {
-                    "distance": 800,
-                    "size": 80,
-                    "duration": 2,
-                    "opacity": 0.8,
-                    "speed": 3
-                },
-                "repulse": {
-                    "distance": 400,
-                    "duration": 0.4
-                },
-                "push": {
-                    "particles_nb": 4
-                },
-                "remove": {
-                    "particles_nb": 2
-                }
-            }
-        },
-        "retina_detect": true
-    })
-    </script>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <img src="assets/img/portfolio/RGB.png" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Solar System Object Identification</h4>
+              <p>Science</p>
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/RGB-composite.pdf" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+          <div class="portfolio-wrap">
+            <img src="assets/img/portfolio/Pride_Golf.png" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Saratoga Pride Golf League</h4>
+              <p>Web Dev</p>
+              <div class="portfolio-links">
+                <a href="http://saratogapridegolfleague.github.io" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="portfolio-wrap">
+            <img src="assets/img/portfolio/cur_convert.png" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Stock Price Retriever</h4>
+              <p>Software Dev</p>
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/Stock-Data-Tracker.mp4" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <img src="assets/img/portfolio/topics.png" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Theoretical Physics Work</h4>
+              <p>Science</p>
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/Theoretical_Physics.pdf" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+          <div class="portfolio-wrap">
+            <img src="my_logo.png" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>My Portfolio</h4>
+              <p>Web Dev</p>
+              <div class="portfolio-links">
+                <a href="http://ed-ryan.github.io" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+          <div class="portfolio-wrap">
+            <img src="assets/img/portfolio/Food_Truck_2_View.png" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Pierre Fontaine's Portfolio</h4>
+              <p>Web Dev</p>
+              <div class="portfolio-links">
+                <a href="http://pierre-m-fontaine.github.io" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="portfolio-wrap">
+            <img src="assets/img/portfolio/checkers.png" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Checkers</h4>
+              <p>Software Dev</p>
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/Checkers.mp4" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section><!-- End Portfolio Section -->
+
+  <!-- ======= Contact Section ======= -->
+  <section id="contact" class="contact">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Contact</h2>
+        <p>Contact Me</p>
+      </div>
+
+      <div class="row mt-2">
+
+        <div class="col-md-6 d-flex align-items-stretch">
+          <div class="info-box">
+            <i class="bx bx-map"></i>
+            <h3>Location</h3>
+            <p>NYC, US and VA, US</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 mt-4 mt-md-0 d-flex align-items-stretch">
+          <div class="info-box">
+            <i class="bx bx-share-alt"></i>
+            <h3>Social Profiles</h3>
+            <div class="social-links">
+              <a href="https://github.com/Ed-Ryan" class="github"><i class="bi bi-github"></i></a>
+              <a href="https://www.linkedin.com/in/edward-ryan-782015173/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 mt-4 d-flex align-items-stretch">
+          <div class="info-box">
+            <i class="bx bx-envelope"></i>
+            <h3>Email Me</h3>
+            <p>ed.ryan127@example.com</p>
+          </div>
+        </div>
+        <div class="col-md-6 mt-4 d-flex align-items-stretch">
+          <div class="info-box">
+            <i class="bx bx-phone-call"></i>
+            <h3>Call Me (Phone or WhatsApp)</h3>
+            <p>+1 518 538 2710</p>
+          </div>
+        </div>
+      </div>
+
+      <form action="https://formspree.io/f/xjvqbgjz" method="post" role="form" class="php-email-form mt-4">
+        <div class="row">
+          <div class="col-md-6 form-group">
+            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+          </div>
+          <div class="col-md-6 form-group mt-3 mt-md-0">
+            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+          </div>
+        </div>
+        <div class="form-group mt-3">
+          <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+        </div>
+        <div class="form-group mt-3">
+          <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+        </div>
+        <div class="my-3">
+          <div class="loading">Loading</div>
+          <div class="error-message" style="display: none;"></div>
+          <div class="sent-message">Your message has been sent. Thank you!</div>
+        </div>
+        <div class="text-center"><button type="submit">Send Message</button></div>
+      </form>
+
+    </div>
+  </section><!-- End Contact Section -->
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
 </body>
+
 </html>
